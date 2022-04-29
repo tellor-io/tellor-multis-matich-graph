@@ -1,3 +1,2 @@
-# multis-polygon-mumbaih-graph
+# tellor-multis-matich-graph
 
-SubGraph for Tellor Multis on Polygon Mumbai Testnet
