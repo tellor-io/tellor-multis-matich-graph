@@ -1,0 +1,114 @@
+type DailyLimitChangeEntity @entity {
+  id: ID!
+  timestamp: BigInt!
+  dailyLimit: BigInt! # uint256
+}
+type ConfirmationEntity @entity {
+  id: ID!
+  sender: String!
+  receiver: Bytes
+  destination: Bytes!
+  value: BigInt!
+  data: Bytes
+  executed: Boolean!
+  gasLimit: BigInt!
+  gasPrice: BigInt!
+  gasUsed: BigInt!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+  txnHash: Bytes!
+  txnId: BigInt! # uint256
+}
+type RevocationEntity @entity {
+  id: ID!
+  sender: String!
+  receiver: Bytes
+  destination: Bytes!
+  value: BigInt!
+  data: Bytes
+  executed: Boolean!
+  gasLimit: BigInt!
+  gasPrice: BigInt!
+  gasUsed: BigInt!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+  txnHash: Bytes!
+  txnId: BigInt! # uint256
+}
+type SubmissionEntity @entity {
+  id: ID!
+  sender: String!
+  receiver: Bytes
+  destination: Bytes!
+  value: BigInt!
+  data: Bytes
+  executed: Boolean!
+  gasLimit: BigInt!
+  gasPrice: BigInt!
+  gasUsed: BigInt!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+  txnHash: Bytes!
+  txnId: BigInt! # uint256
+}
+type ExecutionEntity @entity {
+  id: ID!
+  sender: String!
+  receiver: Bytes
+  destination: Bytes!
+  value: BigInt!
+  data: Bytes
+  executed: Boolean!
+  gasLimit: BigInt!
+  gasPrice: BigInt!
+  gasUsed: BigInt!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+  txnHash: Bytes!
+  txnId: BigInt! # uint256
+}
+type ExecutionFailureEntity @entity {
+  id: ID!
+  sender: String!
+  receiver: Bytes
+  destination: Bytes!
+  value: BigInt!
+  data: Bytes
+  executed: Boolean!
+  gasLimit: BigInt!
+  gasPrice: BigInt!
+  gasUsed: BigInt!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+  txnHash: Bytes!
+  txnId: BigInt! # uint256
+}
+type DepositEntity @entity {
+  id: ID!
+  sender: String!
+  receiver: Bytes
+  gasLimit: BigInt!
+  gasPrice: BigInt!
+  gasUsed: BigInt!
+  timestamp: BigInt!
+  blockNumber: BigInt!
+  txnHash: Bytes!
+  value: BigInt! # uint256
+}
+type OwnerAdditionEntity @entity {
+  id: ID!
+  timestamp: BigInt!
+  owners: [String!]!
+  ownerAddress: String!
+}
+type OwnerRemovalEntity @entity {
+  id: ID!
+  timestamp: BigInt!
+  owners: [String!]!
+  ownerAddress: String!
+}
+type RequirementChangeEntity @entity {
+  id: ID!
+  timestamp: BigInt!
+  requiredSignatures: BigInt!
+}

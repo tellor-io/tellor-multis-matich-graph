@@ -1,0 +1,51 @@
+specVersion: 0.0.2
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Contract
+    network: mumbai
+    source:
+      address: "0x80fc34a2f9FfE86F41580F47368289C402DEc660"
+      abi: Contract
+      startBlock: 24289100
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - DailyLimitChange
+        - Confirmation
+        - Revocation
+        - Submission
+        - Execution
+        - ExecutionFailure
+        - Deposit
+        - OwnerAddition
+        - OwnerRemoval
+        - RequirementChange
+      abis:
+        - name: Contract
+          file: Contract/abis/Contract.json
+      eventHandlers:
+        - event: DailyLimitChange(uint256)
+          handler: handleDailyLimitChange
+        - event: Confirmation(indexed address,indexed uint256)
+          handler: handleConfirmation
+        - event: Revocation(indexed address,indexed uint256)
+          handler: handleRevocation
+        - event: Submission(indexed uint256)
+          handler: handleSubmission
+        - event: Execution(indexed uint256)
+          handler: handleExecution
+        - event: ExecutionFailure(indexed uint256)
+          handler: handleExecutionFailure
+        - event: Deposit(indexed address,uint256)
+          handler: handleDeposit
+        - event: OwnerAddition(indexed address)
+          handler: handleOwnerAddition
+        - event: OwnerRemoval(indexed address)
+          handler: handleOwnerRemoval
+        - event: RequirementChange(uint256)
+          handler: handleRequirementChange
+      file: Contract/Contract.wasm
