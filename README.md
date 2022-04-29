@@ -33,7 +33,7 @@
   <h2 align="center">tellor-multis-matich-graph</h2>
 
   <p align="center">
-    This is the subgraph code for the Tellor Treasuries contract on Ethereum Mainnet.
+    This is the subgraph code for the Tellor Multi-Sig contract on Polygon Mainnet.
     <br />
     <br />
     <a href="https://github.com/tellor-io/tellor-multis-matich-graph/issues">Report Bug</a>
